@@ -29,3 +29,5 @@ This tool uses the [Downloads API](https://paper.readthedocs.io/en/stable/site/a
 ### Can I contribute
 Yes you can. Feel free to fork and make PR's!
 
+## Download 
+You can download the latest version from the [releases](https://github.com/DarkEyeDragon/PaperDownload/releases) page.
