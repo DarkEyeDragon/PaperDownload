@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperDownloader", "PaperDownloader\PaperDownloader.csproj", "{56AE06E6-ED10-4F29-B033-8EF61B9A3C51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56AE06E6-ED10-4F29-B033-8EF61B9A3C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AE06E6-ED10-4F29-B033-8EF61B9A3C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AE06E6-ED10-4F29-B033-8EF61B9A3C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56AE06E6-ED10-4F29-B033-8EF61B9A3C51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A97ACB1E-73EC-40A7-8EEF-454FCEC8FC0E}
+	EndGlobalSection
+EndGlobal
