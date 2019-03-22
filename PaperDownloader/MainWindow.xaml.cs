@@ -81,8 +81,8 @@ namespace PaperDownloader
         {
             Projects.DownloadChangeEvent -= UpdateDownload;
             Projects.DownloadCompleted -= DownloadCompleted;
-            var result = MessageBox.Show("Do you want to start the server now?", "Start server",
-                MessageBoxButton.YesNo, MessageBoxImage.Question);
+            var result = MessageBox.Show("Your jar has been downloaded.", "Success!",
+                MessageBoxButton.OK, MessageBoxImage.Asterisk);
             ProgressBarDownload.Value = 0;
 
         }
