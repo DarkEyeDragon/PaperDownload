@@ -1,4 +1,8 @@
 # PaperDownload
+
+[![AppVeyor](https://img.shields.io/appveyor/ci/darkeyedragon/paperdownload.svg)](https://travis-ci.com/darkeyedragon/paperdownload)
+[![AppVeyor tests](https://img.shields.io/appveyor/tests/darkeyedragon/paperdownload.svg)](https://ci.appveyor.com/project/DarkEyeDragon/paperdownload/build/tests)
+
 Download Minecraft Paper servers with ease.
 This is a stand alone project and is not related to [PaperMC](https://papermc.io/) in any way.
 
@@ -7,7 +11,8 @@ PaperDownload is a lightweight Windows application that lets you download any [P
 This includes [Paper](https://github.com/PaperMC/Paper), [Waterfall](https://github.com/PaperMC/Waterfall) and [Travertine](https://github.com/PaperMC/Travertine).
 
 ### Will there be Spigot support
-No. Paper is compatible with Spigot. So your plugins will run fine on it. There really isn't any downside of using Paper.
+No. 
+Paper is compatible with Spigot. So your plugins will run fine on it. There really isn't any downside of using Paper.
 
 ### How to use
 1. Launch the application.
