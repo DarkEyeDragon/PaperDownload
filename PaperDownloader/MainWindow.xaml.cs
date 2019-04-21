@@ -43,7 +43,7 @@ namespace PaperDownloader
             PopulateVersion();
 
 
-            if (CheckBoxManual.IsVisible && CheckBoxManual.IsChecked == true)
+            if (CheckBoxManual.IsChecked == true)
             {
                 PopulateBuilds();
             }
@@ -81,7 +81,7 @@ namespace PaperDownloader
         {
             Projects.DownloadChangeEvent -= UpdateDownload;
             Projects.DownloadCompleted -= DownloadCompleted;
-            var result = MessageBox.Show("Your jar has been downloaded.", "Success!",
+            MessageBox.Show("Your jar has been downloaded.", "Success!",
                 MessageBoxButton.OK, MessageBoxImage.Asterisk);
             ProgressBarDownload.Value = 0;
 

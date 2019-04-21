@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:PaperDownloader"
         mc:Ignorable="d"
         Title="Paper Downloader" Height="300" Width="450"
+        MinWidth="450" MinHeight="300"
+        MaxHeight="500" MaxWidth="600"
+
         Background="{StaticResource BackGroundLarge}">
     <Grid>
         <Grid Style="{StaticResource GridContainer}">
@@ -18,14 +21,13 @@
                 </Style>
             </Grid.Resources>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="240" />
-                <ColumnDefinition Width="100" />
-                <ColumnDefinition Width="333" />
+                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="25" />
                 <RowDefinition Height="40" />
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="80"/>
 
             </Grid.RowDefinitions>
@@ -34,13 +36,13 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <ComboBox Grid.Column="0" Margin="0,9" Name="ComboBoxProject" SelectionChanged="ComboBoxProject_SelectionChanged"/>
-                <ComboBox Grid.Column="1" Grid.Row="0" Name="ComboBoxVersions" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120" SelectionChanged="ComboBoxVersions_SelectionChanged" Height="22"/>
+                <ComboBox Grid.Column="0" Name="ComboBoxProject" SelectionChanged="ComboBoxProject_SelectionChanged"/>
+                <ComboBox Grid.Column="1" Name="ComboBoxVersions" SelectionChanged="ComboBoxVersions_SelectionChanged"/>
             </Grid>
             <Label Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center" Content="Output directory"/>
             <TextBox Name="TextBoxPath" Grid.Column="0" Grid.Row="1" Margin="3,8" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
             <CheckBox Grid.Column="1" Grid.Row="2" Margin="3,0,0,0" Name="CheckBoxManual" IsChecked="False" Content="Manual build" VerticalContentAlignment="Center"  Checked="CheckBoxIsLatest_OnChecked"/>
-            <ComboBox Margin="0,9" Grid.Column="1" Grid.Row="2" Name="ComboBoxBuilds" SelectionChanged="ComboBoxBuilds_OnSelectionChanged">
+            <ComboBox Grid.Column="1" Grid.Row="2" Name="ComboBoxBuilds" SelectionChanged="ComboBoxBuilds_OnSelectionChanged">
                 <ComboBox.Style>
                     <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
                         <Style.Triggers>
