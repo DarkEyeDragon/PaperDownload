@@ -20,6 +20,13 @@ dotnet_csproj:
   informational_version: '{version}'
 after_build:
   7z a PaperDownload.zip %APPVEYOR_BUILD_FOLDER%\PaperDownloader\bin\Release
+
+
+
+artifacts:
+  path: PaperDownload.zip
+  name: PaperDownload
+
 deploy:
   release: PaperDownload-v$(appveyor_build_version)
   description: 'Download paper jars with ease'
