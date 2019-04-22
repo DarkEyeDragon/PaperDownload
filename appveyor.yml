@@ -1,4 +1,4 @@
-version: '{build}'
+version: '1.0.{build}'
 
 image: Visual Studio 2017
 configuration: Release
@@ -28,7 +28,5 @@ deploy:
   artifact: bin/Release            # upload all files form release
   draft: false
   prerelease: false
-  tag: $(APPVEYOR_REPO_TAG_NAME)
   on:
-    appveyor_repo_tag: true
     branch: master                 # release from master branch only
