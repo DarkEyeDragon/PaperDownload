@@ -34,6 +34,8 @@ namespace PaperDownloader
             ComboBoxProject.Items.Add(Project.Travertine);
             ComboBoxProject.SelectedItem = ComboBoxProject.Items[0];
             Build = "latest";
+            Projects.DownloadChangeEvent += UpdateDownload;
+            Projects.DownloadCompleted += DownloadCompleted;
         }
 
         private void ComboBoxProject_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -71,16 +73,20 @@ namespace PaperDownloader
                 Build = "latest";
             }
 
-            Projects.DownloadChangeEvent += UpdateDownload;
-            Projects.DownloadCompleted += DownloadCompleted;
-            Projects.DownloadJar(ProjectType, Version, Build);
+            if (!TextBoxPath.Text.Equals(string.Empty))
+            {
+                Projects.DownloadJar(ProjectType, Version, Build);
+            }
+            else
+            {
+                MessageBox.Show("Please provide a valid path", "Invalid Path!",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
         private void DownloadCompleted()
         {
-            Projects.DownloadChangeEvent -= UpdateDownload;
-            Projects.DownloadCompleted -= DownloadCompleted;
             MessageBox.Show("Your jar has been downloaded.", "Success!",
                 MessageBoxButton.OK, MessageBoxImage.Asterisk);
             ProgressBarDownload.Value = 0;
