@@ -1,7 +1,8 @@
-version: '{build}'
+version: '1.0.{build}'
 
 image: Visual Studio 2017
 configuration: Release
+
 
 before_build:
 - ps: nuget restore
@@ -9,28 +10,23 @@ before_build:
 build:
   verbosity: minimal
 
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
+after_build:
+  7z a PaperDownload.zip %APPVEYOR_BUILD_FOLDER%\PaperDownloader\bin\Release
+
+
+
+artifacts:
+  path: PaperDownload.zip
+  name: PaperDownload
 
 deploy:
-  release: PaperDownload-v$(appveyor_build_version)
+  #release: PaperDownload-v$(appveyor_build_version)
   description: 'Download paper jars with ease'
   provider: GitHub
   auth_token:
     secure: 2ZjNMlRALutd+9SLwQrQljeBdTAlf+YCrMy66K6iEu6KNDhF9G0Bv5DgBnNL5zJM # your encrypted token from GitHub
-  artifact: bin/Release            # upload all NuGet packages to release assets
+  artifact: PaperDownload.zip          # upload all files form release
   draft: false
   prerelease: false
   on:
     branch: master                 # release from master branch only
-    APPVEYOR_REPO_TAG: true
-
-artifacts:
-  - path: '*.zip'
-  - name: PaperDownload
