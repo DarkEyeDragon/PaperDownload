@@ -25,12 +25,12 @@ deploy:
   provider: GitHub
   auth_token:
     secure: 2ZjNMlRALutd+9SLwQrQljeBdTAlf+YCrMy66K6iEu6KNDhF9G0Bv5DgBnNL5zJM # your encrypted token from GitHub
-  artifact: bin/Release            # upload all NuGet packages to release assets
+  artifact: bin/Release            # upload all files form release
   draft: false
   prerelease: false
   on:
     branch: master                 # release from master branch only
-    APPVEYOR_REPO_TAG: true
+    appveyor_repo_tag: true
 
 artifacts:
   - path: PaperDownload.zip
