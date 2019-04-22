@@ -8,3 +8,29 @@ before_build:
 
 build:
   verbosity: minimal
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+
+deploy:
+  release: PaperDownload-v$(appveyor_build_version)
+  description: 'Download paper jars with ease'
+  provider: GitHub
+  auth_token:
+    secure: 2ZjNMlRALutd+9SLwQrQljeBdTAlf+YCrMy66K6iEu6KNDhF9G0Bv5DgBnNL5zJM # your encrypted token from GitHub
+  artifact: bin/Release            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    APPVEYOR_REPO_TAG: true
+
+artifacts:
+  - path: '*.zip'
+  - name: PaperDownload
