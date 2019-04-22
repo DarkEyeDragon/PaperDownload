@@ -33,4 +33,4 @@ deploy:
 
 artifacts:
   - path: '*.zip'
-  - name: PaperDownload
+    name: PaperDownload
