@@ -10,14 +10,6 @@ before_build:
 build:
   verbosity: minimal
 
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
 after_build:
   7z a PaperDownload.zip %APPVEYOR_BUILD_FOLDER%\PaperDownloader\bin\Release
 
@@ -28,7 +20,7 @@ artifacts:
   name: PaperDownload
 
 deploy:
-  release: PaperDownload-v$(appveyor_build_version)
+  #release: PaperDownload-v$(appveyor_build_version)
   description: 'Download paper jars with ease'
   provider: GitHub
   auth_token:
