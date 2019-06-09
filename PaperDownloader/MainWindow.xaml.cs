@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using PaperDownload.Launch;
 using PaperDownloader.Servers.Versions;
 
 namespace PaperDownloader
@@ -81,6 +82,18 @@ namespace PaperDownloader
             {
                 MessageBox.Show("Please provide a valid path", "Invalid Path!",
                     MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (CheckBoxGenerateBatch.IsChecked == true)
+            {
+                var batch = new Batch(ProjectType, Version, Build, Projects.DownloadPath, "launch.bat");
+                batch.Create();
+            }
+            if (CheckBoxGenerateEula.IsChecked == true)
+            {
+                var eula = new Eula( Projects.DownloadPath, true);
+                eula.Create();
             }
         }
 

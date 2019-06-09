@@ -29,6 +29,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="80"/>
+                <RowDefinition Height="70"/>
 
             </Grid.RowDefinitions>
             <Grid Column="0" Row="2">
@@ -63,6 +64,11 @@
                 <ProgressBar Name="ProgressBarDownload"/>
             </Button>
             <Button Margin="3,8" Grid.Row="1" Grid.Column="1" Content="Browse..." Name="ButtonBrowse" Click="ButtonBrowse_Click"/>
+            <StackPanel Grid.Column="0" Grid.Row="4" Margin="3">
+                <CheckBox Margin="0,4" Name="CheckBoxGenerateBatch" IsChecked="False" Content="Create optimized launch.bat"  Checked="CheckBoxIsLatest_OnChecked"/>
+                <CheckBox Margin="0,4" Name="CheckBoxGenerateEula" IsChecked="False" Content="Accept EULA"  Checked="CheckBoxIsLatest_OnChecked"/>
+            </StackPanel>
+            
         </Grid>
     </Grid>
 </Window>

@@ -103,6 +103,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Launch\Batch.cs" />
+    <Compile Include="Launch\Eula.cs" />
     <Compile Include="Servers\Versions\Projects.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
