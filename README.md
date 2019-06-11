@@ -38,7 +38,7 @@ Yes you can. Feel free to fork and make PR's!
 You can download the latest version from the [releases](https://github.com/DarkEyeDragon/PaperDownload/releases) page.
 
 #### Screenshots
-![screenshot 1](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_1 "Screenshot 1")
-![screenshot 2](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_2 "Screenshot 2")
-![screenshot 3](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_3 "Screenshot 3")
-![screenshot 4](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_4 "Screenshot 4")
+![screenshot 1](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_1.png "Screenshot 1")
+![screenshot 2](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_2.png "Screenshot 2")
+![screenshot 3](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_3.png "Screenshot 3")
+![screenshot 4](https://github.com/DarkEyeDragon/PaperDownload/Screenshots/PaperDownloader_4.png "Screenshot 4")
