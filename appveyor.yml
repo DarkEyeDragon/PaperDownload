@@ -23,7 +23,7 @@ skip_commits:
   files:
     - Screenshots/*
     - '*.md'
-	- .gitignore
+	- '.gitignore'
 	- appveyor.yml
     
 deploy:
