@@ -22,8 +22,7 @@ artifacts:
 skip_commits:
   files:
     - Screenshots/*
-    - '*.md'
-	- 'appveyor.yml'
+    - '**/*.md'
     
 deploy:
   #release: PaperDownload-v$(appveyor_build_version)
