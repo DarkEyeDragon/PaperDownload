@@ -22,7 +22,7 @@ artifacts:
 skip_commits:
   files:
     - Screenshots/*
-    - *.md
+    - '*.md'
 	- .gitignore
 	- appveyor.yml
     
