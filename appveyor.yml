@@ -19,9 +19,16 @@ artifacts:
   path: PaperDownload.zip
   name: PaperDownload
 
+skip_commits:
+  files:
+    - Screenshots/*
+    - *.md
+	- .gitignore
+	- appveyor.yml
+    
 deploy:
   #release: PaperDownload-v$(appveyor_build_version)
-  description: 'Download paper jars with ease'
+  description: APPVEYOR_REPO_COMMIT_MESSAGE APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED
   provider: GitHub
   auth_token:
     secure: 2ZjNMlRALutd+9SLwQrQljeBdTAlf+YCrMy66K6iEu6KNDhF9G0Bv5DgBnNL5zJM # your encrypted token from GitHub
