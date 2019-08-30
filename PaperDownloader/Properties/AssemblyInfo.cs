@@ -11,7 +11,7 @@ using System.Windows;
 [assembly: AssemblyDescription("Download Minecraft Paper servers with ease")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PaperDownloader")]
+[assembly: AssemblyProduct("PaperDownload")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

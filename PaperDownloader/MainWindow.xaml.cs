@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using PaperDownload.Launch;
+using PaperDownload.Options;
 using PaperDownloader.Servers.Versions;
 
-namespace PaperDownloader
+namespace PaperDownload
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

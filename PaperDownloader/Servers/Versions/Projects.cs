@@ -19,18 +19,18 @@ namespace PaperDownloader.Servers.Versions
 
     class Projects
     {
-        private static string _baseUrl = "https://papermc.io/api/v1/";
+        private static readonly string _baseUrl = "https://papermc.io/api/v1/";
 
         public static string DownloadPath { get; set; }
 
 
-        private static readonly string USER_AGENT = $"{Assembly.GetEntryAssembly().GetName().Name}/{Assembly.GetEntryAssembly().GetName().Version} ({AssemblyContentType.WindowsRuntime})";
+        private static readonly string UserAgent = $"{Assembly.GetEntryAssembly().GetName().Name}/{Assembly.GetEntryAssembly().GetName().Version} ({AssemblyContentType.WindowsRuntime})";
 
         public static string[] GetVersions(Project project)
         {
             using (WebClient wc = new WebClient())
             {
-                wc.Headers.Add(HttpRequestHeader.UserAgent, USER_AGENT);
+                wc.Headers.Add(HttpRequestHeader.UserAgent, UserAgent);
                 var json = wc.DownloadString($"{_baseUrl}{project.ToString().ToLower()}");
                 Dictionary<string, object> result = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
                 foreach (var keyValuePair in result)
@@ -50,7 +50,7 @@ namespace PaperDownloader.Servers.Versions
         {
             using (WebClient wc = new WebClient())
             {
-                wc.Headers.Add(HttpRequestHeader.UserAgent, USER_AGENT);
+                wc.Headers.Add(HttpRequestHeader.UserAgent, UserAgent);
                 var json = wc.DownloadString($"{_baseUrl}{project.ToString().ToLower()}/{version}");
                 Dictionary<string, object> result = JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
                 foreach (var keyValuePair in result)
@@ -85,7 +85,7 @@ namespace PaperDownloader.Servers.Versions
             using (WebClient wc = new WebClient())
             {
                 string localPath = $"{DownloadPath}/{project}-{version}_{build}.jar";
-                wc.Headers.Add(HttpRequestHeader.UserAgent, USER_AGENT);
+                wc.Headers.Add(HttpRequestHeader.UserAgent, UserAgent);
                 wc.DownloadFileAsync(new Uri(
                         $"{_baseUrl}{project.ToString().ToLower()}/{version}/{build}/download"),
                     localPath);
