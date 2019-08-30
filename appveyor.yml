@@ -35,3 +35,7 @@ deploy:
   prerelease: false
   on:
     branch: master                 # release from master branch only
+
+branches:
+  only:
+    - production
